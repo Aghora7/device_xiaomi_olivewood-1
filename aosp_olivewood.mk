@@ -18,13 +18,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit from the common LineageOS configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from device.mk
 $(call inherit-product, device/xiaomi/olivewood/device.mk)
 
 PRODUCT_DEVICE := olivewood
-PRODUCT_NAME := lineage_olivewood
+PRODUCT_NAME := aosp_olivewood
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 8A Dual
 PRODUCT_MANUFACTURER := Xiaomi
@@ -35,3 +35,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="olivewood"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_GAPPS_ARCH := arm64
